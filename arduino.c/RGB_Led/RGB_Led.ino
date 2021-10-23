@@ -11,7 +11,7 @@ void setup() {
   
   pinMode(OUTPUT_RED,OUTPUT);
   pinMode(OUTPUT_GREEN,OUTPUT);
-  //pinMode(OUTPUT_BLUE,OUTPUT);
+  pinMode(OUTPUT_BLUE,OUTPUT);
   
   while(!Serial);
 
@@ -19,7 +19,7 @@ void setup() {
 
 void loop() {
   readSensor();
-  delay(1000);
+  delay(100);
 }
 
 void readSensor(){
@@ -31,10 +31,10 @@ void readSensor(){
   byte gValue = map(g, 0, 1025, 0, 255);
   byte bValue = map(b, 0, 1025, 0, 255);
 
-  Serial.println("紅色：" + String(rValue));
-  Serial.println("綠色：" + String(gValue));
-  Serial.println("藍色：" + String(bValue));
-  Serial.println("-------------------");
+//  Serial.println("紅色：" + String(rValue));
+//  Serial.println("綠色：" + String(gValue));
+//  Serial.println("藍色：" + String(bValue));
+//  Serial.println("-------------------");
   changeColor(rValue,gValue,bValue);
 }
 

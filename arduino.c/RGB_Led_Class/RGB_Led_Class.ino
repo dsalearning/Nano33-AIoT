@@ -21,5 +21,5 @@ void loop() {
   r.run();
   g.run();
   b.run();
-  delay(1000);
+  delay(100);
 }
